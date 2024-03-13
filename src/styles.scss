@@ -1,1 +1,27 @@
 /* You can add global styles to this file, and also import other style files */
+
+$mobile: 375px;
+$desktop: 1440px;
+
+$puple: hsl(259, 100%, 65%);
+$lightRed: hsl(0, 100%, 67%);
+$white: hsl(0, 0%, 100%);
+$offWhite: hsl(0, 0%, 94%);
+$lightGrey: hsl(0, 0%, 86%);
+$smokeGrey: hsl(0, 1%, 44%);
+$offBlack: hsl(0, 0%, 8%);
+
+$fontSize: 32px;
+$fontFamily: "Poppins", sans-serif;
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body
+{
+  height: 100%;
+  background-color: $lightGrey;
+  overflow: hidden;
+}

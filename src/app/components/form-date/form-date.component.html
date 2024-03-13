@@ -1,0 +1,66 @@
+<form [formGroup]="form" (submit)="onSubmit()">
+  <div class="input-container">
+    <div>
+      <label [ngClass]="getClassError()" for="day">DAY</label>
+      <input
+        [ngClass]="getClassError()"
+        type="number"
+        name="day"
+        id="day"
+        formControlName="day"
+        maxlength="2"
+        placeholder="DD"
+        required
+      />
+      <div *ngIf="(day?.errors||form?.errors) && submitClicado" class="message-error">
+        <p *ngIf="day?.errors?.['required']">This field is required</p>
+        <p *ngIf="form?.errors?.['dayValid']">Must be a valid day</p>
+        <p *ngIf="form?.errors?.['dayInvalid']">Must be in the past</p>
+
+      </div>
+    </div>
+    <div>
+      <label [ngClass]="getClassError()" for="month">MONTH</label>
+      <input
+        [ngClass]="getClassError()"
+        type="number"
+        name="month"
+        id="month"
+        formControlName="month"
+        maxlength="2"
+        placeholder="MM"
+        required
+      />
+      <div *ngIf="(month?.errors||form?.errors) && submitClicado" class="message-error">
+        <p *ngIf="month?.errors?.['required']">This field is required</p>
+        <p *ngIf="month?.errors?.['monthValida']">Must be a valid month</p>
+        <p *ngIf="form?.errors?.['monthInvalid']">Must be in the past</p>
+
+      </div>
+    </div>
+    <div>
+      <label [ngClass]="getClassError()" for="year">YEAR</label>
+      <input
+        [ngClass]="getClassError()"
+        type="number"
+        name="year"
+        id="year"
+        formControlName="year"
+        maxlength="4"
+        placeholder="YYYY"
+        required
+      />
+      <div *ngIf="(year?.errors||form?.errors) && submitClicado" class="message-error">
+        <p *ngIf="form?.errors?.['yearInvalid']">Must be in the past</p>
+        <p *ngIf="year?.errors?.['required']">This field is required</p>
+      </div>
+    </div>
+  </div>
+  <div class="container-button">
+    <div>
+      <button type="submit">
+        <img src="../../../assets/icon-arrow.svg" alt="Confirmar" />
+      </button>
+    </div>
+  </div>
+</form>

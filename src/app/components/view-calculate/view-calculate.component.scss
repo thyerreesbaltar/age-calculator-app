@@ -1,0 +1,43 @@
+@import "../../../styles.scss";
+.show-age {
+  width: 80vw;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: start;
+
+  p{
+    font-size: 2.8em;
+    font-family: $fontFamily;
+    font-weight: 800;
+    font-style: italic;
+    color: $offBlack;
+
+    span {
+      color: $puple;
+    }
+  }
+}
+
+@media screen and (min-width: 376px) {
+  .show-age {
+      width: 70vw;
+
+      p {
+        font-size: 3.3em;
+      }
+    }
+}
+
+
+@media screen and (min-width: $desktop) {
+  .show-age {
+    width: 35vw;
+
+    p {
+      font-size: 3.5em;
+    }
+  }
+
+}

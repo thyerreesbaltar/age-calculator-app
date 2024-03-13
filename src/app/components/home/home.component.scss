@@ -1,0 +1,58 @@
+@import "../../../styles.scss";
+
+.container-body
+{
+
+  height: 100vh;
+  padding-top: 30%;
+
+  .container-app {
+    margin: 0 auto;
+    background-color: $white;
+
+    width: 90vw;
+    height: 60vh;
+    border-radius: 24px 24px 150px 24px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media screen and (min-width: 376px) {
+  .container-body{
+      padding-top: 0%;
+
+    .container-app {
+      margin-top: 5%;
+      width: 80vw;
+      height: 66vh;
+    }
+  }
+}
+@media screen and (min-width: $desktop) {
+  .container-body {
+
+      padding-top: 0%;
+
+      .container-app {
+        margin-top: 5%;
+      width: 40vw;
+      height: 65vh;
+    }
+  }
+}
+
+@media screen and (min-width: 2560px) {
+  .container-body {
+
+    padding-top: 0%;
+
+    .container-app {
+      margin-top: 5%;
+      width: 40vw;
+      height: 45vh;
+    }
+  }
+}

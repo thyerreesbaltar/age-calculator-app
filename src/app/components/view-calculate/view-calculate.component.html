@@ -1,0 +1,21 @@
+<div  *ngIf="(date.day != dateNow.getDate())
+&&
+(date.month != dateNow.getMonth())
+&&
+(date.year != dateNow.getFullYear()) ; else elseShowAge">
+<div class="show-age">
+  <p><span>{{ date.year }}</span> years</p>
+  <p><span>{{ date.month }}</span> months</p>
+  <p><span>{{ date.day }}</span> days</p>
+</div>
+
+</div>
+
+<ng-template   #elseShowAge>
+  <div class="show-age">
+    <p><span> - - </span> years</p>
+    <p><span> - - </span> months</p>
+    <p><span> - - </span> days</p>
+  </div>
+</ng-template>
+
